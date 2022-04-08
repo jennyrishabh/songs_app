@@ -16,7 +16,7 @@ class _ListOfSongsState extends State<ListOfSongs> {
   int currentSongIndex = 0;
   List<Song> songs = [];
   dynamic error;
-  ApiClient client = ApiClient();
+  ApiClient client = ApiClient.getInstance();
   @override
   void initState() {
     // TODO: implement initState
@@ -116,7 +116,8 @@ class _ListOfSongsState extends State<ListOfSongs> {
         title: Container(
           margin: EdgeInsets.all(20),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(10)
+              color: Colors.white,
+              //borderRadius: BorderRadius.circular(10)
           ),
           //color: Colors.white,
           child: TextField(

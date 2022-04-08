@@ -15,7 +15,7 @@ class _ListOfSongsState extends State<ListOfSongs> {
   int currentSongIndex = 0;
   List<Song> songs = [];
   dynamic error;
-  ApiClient client = ApiClient();
+  ApiClient client = ApiClient.getInstance();
   @override
   void initState() {
     // TODO: implement initState

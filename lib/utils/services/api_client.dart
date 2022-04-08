@@ -1,8 +1,21 @@
+import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as jsonconvert;
 import '../../models/song.dart';
 
 class ApiClient {
+  static Dio dio = Dio();
+
+  static ApiClient _apiClient = ApiClient._();
+
+  static ApiClient getInstance(){
+    return _apiClient;
+  }
+
+  ApiClient._(){
+
+  }
+
   void getSongs(Function successCallBack, Function failCallBack,
       {String searchValue = "sonunigam"}) {
     //
